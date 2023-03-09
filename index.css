@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
+:root {
+    --blue: #3282F7;
+    --green: #68D9A4;
+    --scarlet: #ED6454;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -20,4 +26,182 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+h3 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.search-bar {
+    height: 69px;
+    background-color: #E7E7E7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.search-bar input {
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+}
+
+.search-bar input:focus {
+    outline: none;
+}
+
+.selected-filters {
+    margin-top: 25px;
+}
+
+.selected-filter {
+    background-color: var(--blue);
+    width: fit-content;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 8px 15px;
+}
+
+.selected-filter img {
+    margin-left: 5px;
+}
+
+.filters {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter .filter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 15px;
+    border: none;
+    border-radius: 5px 5px 0 0;
+    color: white;
+}
+
+.filter .filter-btn input {
+    background-color: transparent;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+}
+
+.filter:first-of-type .filter-btn,
+.filter:first-of-type .dropdown {
+    background-color: var(--blue);
+}
+
+.filter:nth-of-type(2) .filter-btn,
+.filter:nth-of-type(2) .dropdown {
+    background-color: var(--green);
+}
+
+.filter:last-of-type .filter-btn,
+.filter:last-of-type .dropdown {
+    background-color: var(--scarlet);
+}
+
+.filter .dropdown {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 5px 5px;
+}
+
+.filter .filter-btn input::placeholder {
+    color: white;
+}
+
+.filter .dropdown input:focus {
+    outline: none;
+}
+
+.filter .dropdown .filter-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px 15px 10px 15px;
+}
+
+.filter .dropdown .filter-items li {
+    color: white;
+    font-weight: 500;
+}
+
+.recipes {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+}
+
+.card {
+    background-color: #E7E7E7;
+    border-radius: 5px;
+}
+
+.card-image {
+    height: 178px;
+    background-color: #C7BEBE;
+    border-radius: 5px 5px 0 0;
+}
+
+.card-info {
+    padding: 20px;
+    font-size: 12px;
+}
+
+.card-info div:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-info span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+}
+
+.card-info span img {
+    margin-right: 5px;
+}
+
+.card-info div:last-of-type {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.steps {
+    font-family: 'Roboto', sans-serif;
 }

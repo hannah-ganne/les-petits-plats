@@ -16,51 +16,69 @@
     <main>
         <section class="search">
             <form class="search-bar">
-                <input>
+                <input type="text" placeholder="Rechercher une recette">
                 <img src="./assets/search_icon.svg" alt="magnifier icon" />
             </form>
+            <div class="selected-filters">
+                <div class="selected-filter">
+                    Coco
+                    <img src="./assets/delete_icon.svg" alt="x icon" />
+                </div>
+            </div>
             <div class="filters">
                 <article class="filter">
-                    <button onclick="openDropdown()" class="dropbtn">
-                        Ingredients
+                    <div class="filter-btn" onclick="openDropdown()">
+                        <input type="text" value=Ingredients placeholder="Rechercher un ingédient"
+                            onkeyup="searchKeyword()" disabled>
                         <img src="./assets/arrow_down.svg" alt="arrow down icon" />
-                    </button>
-                    <input type="text" placeholder="Rechercher un ingédient" id="myInput" onkeyup="searchKeyword()">
-                    <a href="#about">About</a>
-                    <a href="#base">Base</a>
-                    <a href="#blog">Blog</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#custom">Custom</a>
-                    <a href="#support">Support</a>
-                    <a href="#tools">Tools</a>
+                    </div>
+                    <div class="dropdown">
+                        <ul class="filter-items">
+                            <li>About</li>
+                            <li>Base</li>
+                            <li>Blog</li>
+                            <li>Contact</li>
+                            <li>Custom</li>
+                            <li>Support</li>
+                            <li>Tools</li>
+                        </ul>
+                    </div>
                 </article>
                 <article class="filter">
-                    <button onclick="openDropdown()" class="dropbtn">
-                        Appareils
+                    <div class="filter-btn" onclick="openDropdown()">
+                        <input type="text" value=Appareils placeholder="Rechercher un appareil"
+                            onkeyup="searchKeyword()" disabled>
                         <img src="./assets/arrow_down.svg" alt="arrow down icon" />
-                    </button>
-                    <input type="text" placeholder="Rechercher un appareil" id="myInput" onkeyup="searchKeyword()">
-                    <a href="#about">About</a>
-                    <a href="#base">Base</a>
-                    <a href="#blog">Blog</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#custom">Custom</a>
-                    <a href="#support">Support</a>
-                    <a href="#tools">Tools</a>
+                    </div>
+                    <div class="dropdown">
+                        <ul class="filter-items">
+                            <li>About</li>
+                            <li>Base</li>
+                            <li>Blog</li>
+                            <li>Contact</li>
+                            <li>Custom</li>
+                            <li>Support</li>
+                            <li>Tools</li>
+                        </ul>
+                    </div>
                 </article>
                 <article class="filter">
-                    <button onclick="openDropdown()" class="dropbtn">
-                        Ustensiles
+                    <div class="filter-btn" onclick="openDropdown()">
+                        <input type="text" value=Ustensiles placeholder="Rechercher un ustensile"
+                            onkeyup="searchKeyword()" disabled>
                         <img src="./assets/arrow_down.svg" alt="arrow down icon" />
-                    </button>
-                    <input type="text" placeholder="Rechercher un ustensile" id="myInput" onkeyup="searchKeyword()">
-                    <a href="#about">About</a>
-                    <a href="#base">Base</a>
-                    <a href="#blog">Blog</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#custom">Custom</a>
-                    <a href="#support">Support</a>
-                    <a href="#tools">Tools</a>
+                    </div>
+                    <div class="dropdown">
+                        <ul class="filter-items">
+                            <li>About</li>
+                            <li>Base</li>
+                            <li>Blog</li>
+                            <li>Contact</li>
+                            <li>Custom</li>
+                            <li>Support</li>
+                            <li>Tools</li>
+                        </ul>
+                    </div>
                 </article>
             </div>
         </section>
