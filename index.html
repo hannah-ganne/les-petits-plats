@@ -27,12 +27,11 @@
             </div>
             <div class="filters">
                 <article class="filter">
-                    <div class="filter-btn" onclick="openDropdown()">
-                        <input type="text" value=Ingredients placeholder="Rechercher un ingédient"
-                            onkeyup="searchKeyword()" disabled>
-                        <img src="./assets/arrow_down.svg" alt="arrow down icon" />
+                    <div class="filter-btn">
+                        <input id="ingredient-input" type="text" placeholder="Ingrédient" onkeyup="searchKeyword()">
+                        <img src="./assets/arrow_down.svg" alt="arrow down icon" onclick="openDropdown('ingredient')" />
                     </div>
-                    <div class="dropdown">
+                    <div class="dropdown" id="ingredient-dropdown">
                         <ul class="filter-items">
                             <li>About</li>
                             <li>Base</li>
@@ -45,12 +44,11 @@
                     </div>
                 </article>
                 <article class="filter">
-                    <div class="filter-btn" onclick="openDropdown()">
-                        <input type="text" value=Appareils placeholder="Rechercher un appareil"
-                            onkeyup="searchKeyword()" disabled>
-                        <img src="./assets/arrow_down.svg" alt="arrow down icon" />
+                    <div class="filter-btn">
+                        <input id="appareil-input" type="text" placeholder="Appareils" onkeyup="searchKeyword()">
+                        <img src="./assets/arrow_down.svg" alt="arrow down icon" onclick="openDropdown('appareil')" />
                     </div>
-                    <div class="dropdown">
+                    <div class="dropdown" id="appareil-dropdown">
                         <ul class="filter-items">
                             <li>About</li>
                             <li>Base</li>
@@ -63,12 +61,11 @@
                     </div>
                 </article>
                 <article class="filter">
-                    <div class="filter-btn" onclick="openDropdown()">
-                        <input type="text" value=Ustensiles placeholder="Rechercher un ustensile"
-                            onkeyup="searchKeyword()" disabled>
-                        <img src="./assets/arrow_down.svg" alt="arrow down icon" />
+                    <div class="filter-btn">
+                        <input id="ustensile-input" type="text" placeholder="Ustensiles" onkeyup="searchKeyword()">
+                        <img src="./assets/arrow_down.svg" alt="arrow down icon" onclick="openDropdown('ustensile')" />
                     </div>
-                    <div class="dropdown">
+                    <div class="dropdown" id="ustensile-dropdown">
                         <ul class="filter-items">
                             <li>About</li>
                             <li>Base</li>
@@ -277,7 +274,9 @@
             </article>
         </section>
     </main>
-
+    <script src="./recipes.js"></script>
+    <script src="scripts/pages/index.js"></script>
+    <script src="scripts/utils/dropdown.js"></script>
 </body>
 
 </html>
