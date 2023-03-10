@@ -30,7 +30,7 @@ const recipes = [
         "time": 10,
         "description": "Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistence désirée",
         "appliance": "Blender",
-        "ustensils": ["cuillère à Soupe", "verres", "presse citron"]
+        "ustensils": ["cuillère à soupe", "verres", "presse citron"]
     },
     {
         "id": 2,
@@ -59,7 +59,7 @@ const recipes = [
                 "quantity": 5
             },
             {
-                "ingredient": "Lait de Coco",
+                "ingredient": "Lait de coco",
                 "quantity": 100,
                 "unit": "ml"
             }
@@ -743,7 +743,7 @@ const recipes = [
         "time": 30,
         "description": "Cuisiner la viande hachée dans une poêle à frire. Dans une autre faire cuire les oignons découpés en fins dés avec un peu de beurre. Ajouter du vin rouge. Mélanger les oignons avec la viande hachée. Faire cuire les pates le temps indiqué sur le paquet. Ajouter le coulis de tomates à la viande hachée. Une fois que les pates sont cuites, ajouter la crème fraîche à la viande hachée. Servir.",
         "appliance": "Casserole",
-        "ustensils": ["Cuillère en bois", "louche", "couteau"]
+        "ustensils": ["cuillère en bois", "louche", "couteau"]
     },
     {
         "id": 22,
@@ -1082,7 +1082,7 @@ const recipes = [
         "time": 60,
         "description": "Découper en cubes les carottes et pommes de terre. Faire revenir dans du beurre. Ajouter les lardons, une fois les lardons dorés, ajouter un grand verre d'eau. Ajouter les petit poids et les haricots verts ( tous deux pré cuits ). Ajouter Sel, poivre, thyms et laurier",
         "appliance": "Poêle",
-        "ustensils": ["Couteau", "économe"]
+        "ustensils": ["couteau", "économe"]
     },
     {
         "id": 32,
@@ -1123,7 +1123,7 @@ const recipes = [
         "time": 20,
         "description": "Beurrer les tranches de pain, ajouter entre 2 tranches de pain de mie 1 tranche d’emmental, une de blanc de dinde, et une autre d'emmental. Dans un récipient, mélanger le gruyère rappé avec le lait et la noix de muscade. Mettre sur les croque monsieur. Placer au four durant 10 minutes.",
         "appliance": "Four",
-        "ustensils": ["râpe à fromage", "cuillère à Soupe", "couteau"]
+        "ustensils": ["râpe à fromage", "cuillère à soupe", "couteau"]
     },
     {
         "id": 33,
@@ -1304,7 +1304,7 @@ const recipes = [
         "time": 60,
         "description": "Couper les courgettes dans le sens de la longueur. Vider les courgette dans un saladier. Réserver.Faire revenir la chair des courgettes dans 25cl d'huile d'olive. Ajouter l'oignon puis la viande hachée. Mettre la farce dans les courgettes. Ajouter le coulis de tomates. Mettre au four pendant 30 minutes. Avant la fin de la cuisson ajouter le fromage râpé",
         "appliance": "Four",
-        "ustensils": ["couteau", "cuillère en bois", "Poêle à frire"]
+        "ustensils": ["couteau", "cuillère en bois", "poêle à frire"]
     },
     {
         "id": 38,
@@ -1334,7 +1334,7 @@ const recipes = [
         "time": 20,
         "description": "Fouettez les oeufs, le sucre et le lait. tremper les tranches de pain. Le cuire au four pendant environ 10 minutes à 180°. Servir",
         "appliance": "Four",
-        "ustensils": ["fouet", "bol", "Cuillère à Soupe"]
+        "ustensils": ["fouet", "bol", "cuillère à soupe"]
     },
     {
         "id": 39,
