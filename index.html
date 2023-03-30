@@ -13,268 +13,52 @@
     <header>
         <img src="./assets/logo.svg" alt="logo of les petits plats" />
     </header>
-    <main>
+    <main id="main">
         <section class="search">
             <form class="search-bar">
-                <input type="text" placeholder="Rechercher une recette">
+                <input type="text" placeholder="Rechercher une recette" id="search-input">
                 <img src="./assets/search_icon.svg" alt="magnifier icon" />
             </form>
             <div class="selected-filters">
-                <div class="selected-filter">
-                    Coco
-                    <img src="./assets/delete_icon.svg" alt="x icon" />
-                </div>
             </div>
             <div class="filters">
-                <article class="filter">
+                <article class="filter" id="ingredient-filter">
                     <div class="filter-btn">
-                        <input id="ingredient-input" type="text" placeholder="Ingrédient" onkeyup="searchKeyword()">
-                        <img src="./assets/arrow_down.svg" alt="arrow down icon" onclick="openDropdown('ingredient')" />
+                        <input id="ingredient-input" type="text" placeholder="Ingrédient">
+                        <img class="arrow" id="ingredient-arrow" src="./assets/arrow_down.svg" alt="arrow down icon"
+                            onclick="openDropdown('ingredient')" />
                     </div>
                     <div class="dropdown" id="ingredient-dropdown">
-                        <ul class="filter-items">
-                            <li>About</li>
-                            <li>Base</li>
-                            <li>Blog</li>
-                            <li>Contact</li>
-                            <li>Custom</li>
-                            <li>Support</li>
-                            <li>Tools</li>
-                        </ul>
                     </div>
                 </article>
-                <article class="filter">
+                <article class="filter" id="appareil-filter">
                     <div class="filter-btn">
-                        <input id="appareil-input" type="text" placeholder="Appareils" onkeyup="searchKeyword()">
-                        <img src="./assets/arrow_down.svg" alt="arrow down icon" onclick="openDropdown('appareil')" />
+                        <input id="appareil-input" type="text" placeholder="Appareils">
+                        <img class="arrow" id="appareil-arrow" src="./assets/arrow_down.svg" alt="arrow down icon"
+                            onclick="openDropdown('appareil')" />
                     </div>
                     <div class="dropdown" id="appareil-dropdown">
-                        <ul class="filter-items">
-                            <li>About</li>
-                            <li>Base</li>
-                            <li>Blog</li>
-                            <li>Contact</li>
-                            <li>Custom</li>
-                            <li>Support</li>
-                            <li>Tools</li>
-                        </ul>
                     </div>
                 </article>
-                <article class="filter">
+                <article class="filter" id="ustensile-filter">
                     <div class="filter-btn">
-                        <input id="ustensile-input" type="text" placeholder="Ustensiles" onkeyup="searchKeyword()">
-                        <img src="./assets/arrow_down.svg" alt="arrow down icon" onclick="openDropdown('ustensile')" />
+                        <input id="ustensile-input" type="text" placeholder="Ustensiles">
+                        <img class="arrow" id="ustensile-arrow" src="./assets/arrow_down.svg" alt="arrow down icon"
+                            onclick="openDropdown('ustensile')" />
                     </div>
                     <div class="dropdown" id="ustensile-dropdown">
-                        <ul class="filter-items">
-                            <li>About</li>
-                            <li>Base</li>
-                            <li>Blog</li>
-                            <li>Contact</li>
-                            <li>Custom</li>
-                            <li>Support</li>
-                            <li>Tools</li>
-                        </ul>
                     </div>
                 </article>
             </div>
         </section>
         <section class="recipes">
-            <article class="card">
-                <div class="card-image"></div>
-                <div class="card-info">
-                    <div>
-                        <h3>Title of the recipe</h3>
-                        <span>
-                            <img src="./assets/clock.svg" alt="clock icon" />
-                            10 min
-                        </span>
-                    </div>
-                    <div>
-                        <ul class="ingredients">
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                        </ul>
-                        <p class="steps">Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de
-                            coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistence désirée.</p>
-                    </div>
-                </div>
-            </article>
-            <article class="card">
-                <div class="card-image"></div>
-                <div class="card-info">
-                    <div>
-                        <h3>Title of the recipe</h3>
-                        <span>
-                            <img src="./assets/clock.svg" alt="clock icon" />
-                            10 min
-                        </span>
-                    </div>
-                    <div>
-                        <ul class="ingredients">
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                        </ul>
-                        <p class="steps">Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de
-                            coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistence désirée.</p>
-                    </div>
-                </div>
-            </article>
-            <article class="card">
-                <div class="card-image"></div>
-                <div class="card-info">
-                    <div>
-                        <h3>Title of the recipe</h3>
-                        <span>
-                            <img src="./assets/clock.svg" alt="clock icon" />
-                            10 min
-                        </span>
-                    </div>
-                    <div>
-                        <ul class="ingredients">
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                        </ul>
-                        <p class="steps">Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de
-                            coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistence désirée.</p>
-                    </div>
-                </div>
-            </article>
-            <article class="card">
-                <div class="card-image"></div>
-                <div class="card-info">
-                    <div>
-                        <h3>Title of the recipe</h3>
-                        <span>
-                            <img src="./assets/clock.svg" alt="clock icon" />
-                            10 min
-                        </span>
-                    </div>
-                    <div>
-                        <ul class="ingredients">
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                        </ul>
-                        <p class="steps">Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de
-                            coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistence désirée.</p>
-                    </div>
-                </div>
-            </article>
-            <article class="card">
-                <div class="card-image"></div>
-                <div class="card-info">
-                    <div>
-                        <h3>Title of the recipe</h3>
-                        <span>
-                            <img src="./assets/clock.svg" alt="clock icon" />
-                            10 min
-                        </span>
-                    </div>
-                    <div>
-                        <ul class="ingredients">
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                        </ul>
-                        <p class="steps">Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de
-                            coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistence désirée.</p>
-                    </div>
-                </div>
-            </article>
-            <article class="card">
-                <div class="card-image"></div>
-                <div class="card-info">
-                    <div>
-                        <h3>Title of the recipe</h3>
-                        <span>
-                            <img src="./assets/clock.svg" alt="clock icon" />
-                            10 min
-                        </span>
-                    </div>
-                    <div>
-                        <ul class="ingredients">
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                        </ul>
-                        <p class="steps">Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de
-                            coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistence désirée.</p>
-                    </div>
-                </div>
-            </article>
-            <article class="card">
-                <div class="card-image"></div>
-                <div class="card-info">
-                    <div>
-                        <h3>Title of the recipe</h3>
-                        <span>
-                            <img src="./assets/clock.svg" alt="clock icon" />
-                            10 min
-                        </span>
-                    </div>
-                    <div>
-                        <ul class="ingredients">
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                        </ul>
-                        <p class="steps">Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de
-                            coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistence désirée.</p>
-                    </div>
-                </div>
-            </article>
-            <article class="card">
-                <div class="card-image"></div>
-                <div class="card-info">
-                    <div>
-                        <h3>Title of the recipe</h3>
-                        <span>
-                            <img src="./assets/clock.svg" alt="clock icon" />
-                            10 min
-                        </span>
-                    </div>
-                    <div>
-                        <ul class="ingredients">
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                            <li>incredient</li>
-                        </ul>
-                        <p class="steps">Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de
-                            coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistence désirée.</p>
-                    </div>
-                </div>
-            </article>
+        </section>
+        <section class="no-recipe hidden">
+            Aucune recette ne correspond à votre critère… vous pouvez chercher « tarte aux pommes », « poisson », etc.
         </section>
     </main>
     <script src="./recipes.js"></script>
+    <script src="scripts/factory/recipe.js"></script>
     <script src="scripts/pages/index.js"></script>
     <script src="scripts/utils/dropdown.js"></script>
 </body>
