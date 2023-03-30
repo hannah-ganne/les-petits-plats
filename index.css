@@ -17,6 +17,7 @@ html {
 }
 
 body {
+    width: 100vw;
     font-family: 'Lato', sans-serif;
     font-size: 18px;
     padding: 40px 100px;
@@ -66,6 +67,7 @@ ul {
 
 .selected-filters {
     margin-top: 25px;
+    display: flex;
 }
 
 .selected-filter {
@@ -78,42 +80,57 @@ ul {
     align-items: center;
     border-radius: 5px;
     padding: 8px 15px;
+    margin-right: 5px;
 }
 
-.selected-filter img {
+.selected-filter .x-icon {
     margin-left: 5px;
+    cursor: pointer;
 }
 
 .filters {
     margin-top: 15px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 20px;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .filter {
+    width: 170px;
     display: flex;
     flex-direction: column;
+    position: relative;
+    margin-right: 20px;
+}
+
+.filter:last-of-type {
+    margin-right: 0;
 }
 
 .filter .filter-btn {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 15px;
     border: none;
-    border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px;
     color: white;
+    cursor: pointer;
 }
 
 .filter .filter-btn input {
+    width: 70%;
     background-color: transparent;
     border: none;
     font-family: 'Lato', sans-serif;
     font-size: 18px;
     font-weight: 700;
     color: white;
+    pointer-events: none;
+}
+
+.filter .filter-btn input:focus {
+    outline: none;
 }
 
 .filter:first-of-type .filter-btn,
@@ -132,6 +149,10 @@ ul {
 }
 
 .filter .dropdown {
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    visibility: hidden;
     display: flex;
     flex-direction: column;
     border-radius: 0 0 5px 5px;
@@ -141,11 +162,8 @@ ul {
     color: white;
 }
 
-.filter .dropdown input:focus {
-    outline: none;
-}
-
 .filter .dropdown .filter-items {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 10px 15px 10px 15px;
@@ -154,6 +172,8 @@ ul {
 .filter .dropdown .filter-items li {
     color: white;
     font-weight: 500;
+    cursor: pointer;
+    margin: 5px;
 }
 
 .recipes {
@@ -186,7 +206,7 @@ ul {
     align-items: center;
 }
 
-.card-info span {
+.card-info .time {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -198,10 +218,50 @@ ul {
 }
 
 .card-info div:last-of-type {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
+.card-info .ingredients {
+    margin-right: 5px;
+}
+
 .steps {
+    height: fit-content;
     font-family: 'Roboto', sans-serif;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+input:focus::placeholder,
+.filter .filter-btn input:focus::placeholder {
+    color: transparent;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.ingredient {
+    background-color: var(--blue);
+}
+
+.appareil {
+    background-color: var(--green);
+}
+
+.ustensile {
+    background-color: var(--scarlet);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
 }
