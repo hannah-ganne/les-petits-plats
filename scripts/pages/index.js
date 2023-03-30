@@ -84,29 +84,6 @@ function displayRecipes(recipes) {
     }
 }
 
-// function searchRecipes(keyword) {
-//     keyword = keyword.toLowerCase().trim();
-
-//     const filteredRecipes = [];
-
-//     for (let i = 0; i < recipes.length; i++) {
-//         const recipe = recipes[i];
-//         const name = recipe.name.toLowerCase();
-//         let ingredientNames = [];
-//         for (let i = 0; i < recipe.ingredients.length; i++) {
-//             ingredientNames.push(recipe.ingredients[i].ingredient.toLowerCase());
-//         }
-//         const ingredients = ingredientNames.join(' ');
-//         const description = recipe.description.toLowerCase();
-
-//         if (name.includes(keyword) || ingredients.includes(keyword) || description.includes(keyword)) {
-//             filteredRecipes.push(recipe);
-//         }
-//     }
-
-//     return filteredRecipes;
-// }
-
 function searchIngredients(keyword) {
     keyword = keyword.toLowerCase().trim();
     const ingredients = getAllIngredients();
@@ -167,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const results = searchRecipes(keyword);
             displayRecipes(results);
         } else if (keyword.length < 3) {
-            displayRecipes(filteredRecipes);
+            displayRecipes(recipes);
         }
     });
 
@@ -215,16 +192,6 @@ document.addEventListener('DOMContentLoaded', function () {
     ustensileArrow.addEventListener('click', () => {
         createFilterItems("ustensile", getAllUstensiles());
     })
-
-    // filterItems.forEach(li => {
-    //     li.addEventListener('click', () => {
-    //         const liText = li.innerText;
-    //         const liType = li.className;
-    //         const results = searchRecipes(liText);
-    //         displayRecipes(results);
-    //         displayTag(liText, liType);
-    //     });
-    // });
 
     document.addEventListener('click', function (event) {
         if (event.target.matches('img.x-icon')) {
