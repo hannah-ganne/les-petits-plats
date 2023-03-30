@@ -51,16 +51,23 @@ function createFilterItems(id, items) {
 function searchRecipes(keyword) {
     keyword = keyword.toLowerCase().trim();
 
-    const filteredArray = filteredRecipes.filter(recipe => {
+    const filteredArray = [];
+
+    for (let i = 0; i < filteredRecipes.length; i++) {
+        const recipe = filteredRecipes[i];
         const name = recipe.name.toLowerCase();
-        const ingredients = recipe.ingredients.map(i => i.ingredient.toLowerCase()).join(' ');
+
+        let ingredients = '';
+        for (let j = 0; j < recipe.ingredients.length; j++) {
+            ingredients += recipe.ingredients[j].ingredient.toLowerCase() + ' ';
+        }
+
         const description = recipe.description.toLowerCase();
-        return (
-            name.includes(keyword) ||
-            ingredients.includes(keyword) ||
-            description.includes(keyword)
-        );
-    });
+
+        if (name.includes(keyword) || ingredients.includes(keyword) || description.includes(keyword)) {
+            filteredArray.push(recipe);
+        }
+    }
 
     filteredRecipes = filteredArray;
 
