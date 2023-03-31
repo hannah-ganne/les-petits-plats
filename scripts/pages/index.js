@@ -144,6 +144,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const results = searchRecipes(keyword);
             displayRecipes(results);
         } else if (keyword.length < 3) {
+            filteredRecipes = recipes;
             displayRecipes(recipes);
         }
     });
